@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'core/theme/app_theme.dart';
-import 'screens/home/home_screen.dart';
+import 'screens/splash/splash_screen.dart';
 
 void main() {
   runApp(const FloraMindApp());
@@ -15,7 +15,7 @@ class FloraMindApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'FloraMind AI',
       theme: AppTheme.lightTheme,
-      home: const HomeScreen(),
+      home: const SplashScreen(),
     );
   }
 }
