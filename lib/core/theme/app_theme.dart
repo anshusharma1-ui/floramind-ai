@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'app_colors.dart';
 
 class AppTheme {
   AppTheme._();
@@ -7,17 +8,23 @@ class AppTheme {
     useMaterial3: true,
 
     colorScheme: ColorScheme.fromSeed(
-      seedColor: const Color(0xFF2E7D32),
+      seedColor: AppColors.primary,
       brightness: Brightness.light,
     ),
 
-    scaffoldBackgroundColor: const Color(0xFFF5F7F2),
+    scaffoldBackgroundColor: AppColors.background,
 
     appBarTheme: const AppBarTheme(
       centerTitle: true,
       elevation: 0,
       backgroundColor: Colors.transparent,
-      foregroundColor: Colors.black,
+      foregroundColor: AppColors.textPrimary,
+    ),
+
+    cardTheme: const CardThemeData(
+      elevation: 0,
+      color: AppColors.surface,
+      margin: EdgeInsets.zero,
     ),
   );
 }
