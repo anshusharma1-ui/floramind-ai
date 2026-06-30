@@ -1,3 +1,4 @@
+import '../../widgets/greeting_header.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/theme/app_colors.dart';
@@ -11,10 +12,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
 
-      appBar: AppBar(
-        title: const Text("FloraMind AI"),
-      ),
-
       body: Padding(
         padding: const EdgeInsets.all(20),
 
@@ -23,20 +20,9 @@ class HomeScreen extends StatelessWidget {
 
           children: [
 
-            const Text(
-              "🌿 Welcome",
-              style: AppTextStyles.heading,
-            ),
+            const GreetingHeader(),
 
-            const SizedBox(height: 8),
-
-            const Text(
-              "Grow smarter with AI-powered gardening.",
-              style: AppTextStyles.body,
-            ),
-
-            const SizedBox(height: 30),
-
+const SizedBox(height: 30),
             Container(
               height: 170,
               width: double.infinity,
