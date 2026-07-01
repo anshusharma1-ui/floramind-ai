@@ -1,4 +1,5 @@
 import '../../widgets/greeting_header.dart';
+import '../../widgets/search_bar_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/theme/app_colors.dart';
@@ -22,7 +23,12 @@ class HomeScreen extends StatelessWidget {
 
             const GreetingHeader(),
 
+          const SizedBox(height: 30),
+
+const SearchBarWidget(),
+
 const SizedBox(height: 30),
+
             Container(
               height: 170,
               width: double.infinity,
