@@ -1,9 +1,12 @@
-import '../../widgets/greeting_header.dart';
-import '../../widgets/search_bar_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/theme/app_colors.dart';
-import '../../core/theme/app_text_styles.dart';
+import '../../widgets/greeting_header.dart';
+import '../../widgets/search_bar_widget.dart';
+import '../../widgets/hero_plant_card.dart';
+import '../../widgets/quick_actions_section.dart';
+import '../../widgets/weather_card.dart';
+import '../../widgets/today_tasks_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,43 +16,41 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.background,
 
-      body: Padding(
-        padding: const EdgeInsets.all(20),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20),
 
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
 
-          children: [
+              children: const [
 
-            const GreetingHeader(),
+               GreetingHeader(),
 
-          const SizedBox(height: 30),
+                SizedBox(height: 20),
 
-const SearchBarWidget(),
+                SearchBarWidget(),
 
-const SizedBox(height: 30),
+                SizedBox(height: 20),
 
-            Container(
-              height: 170,
-              width: double.infinity,
+                HeroPlantCard(),
 
-              decoration: BoxDecoration(
-                color: AppColors.primary,
-                borderRadius: BorderRadius.circular(20),
-              ),
+                SizedBox(height: 20),
 
-              child: const Center(
-                child: Text(
-                  "My Garden",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+                QuickActionsSection(),
+
+                SizedBox(height: 20),
+
+                WeatherCard(),
+
+                SizedBox(height: 20),
+
+                TodayTasksCard(),
+
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
